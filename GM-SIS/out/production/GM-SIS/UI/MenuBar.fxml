@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<AnchorPane id="main__body" minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="252.0"
+            stylesheets="@MainView.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="UI.Menu">
+    <children>
+        <AnchorPane id="nav_container" minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="252.0"
+                    xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <AnchorPane fx:id="nav1" layoutY="165.0" xmlns="http://javafx.com/javafx/8.0.60"
+                            xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <Button id="nav_button" fx:id="nav_bg1" contentDisplay="CENTER" mnemonicParsing="false"
+                                prefHeight="70.0" prefWidth="250.0" text="User Panel" textAlignment="CENTER"
+                                textFill="WHITE">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                            <styleClass>
+                                <String fx:value="dark"/>
+                                <String fx:value="active"/>
+                            </styleClass>
+                        </Button>
+                        <Rectangle id="nav_active_accent" fx:id="accent1" fill="WHITE" height="70.0" stroke="BLACK"
+                                   strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" styleClass="active"
+                                   width="2.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="nav2" layoutX="-1.0" layoutY="235.0" xmlns="http://javafx.com/javafx/8.0.60"
+                            xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <Button id="nav_button" fx:id="nav_bg2" contentDisplay="CENTER" mnemonicParsing="false"
+                                prefHeight="70.0" prefWidth="251.0" styleClass="light"
+                                text="Customer Accounts" textFill="WHITE">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Button>
+                        <Rectangle id="nav_active_accent" fx:id="accent2" fill="DODGERBLUE" height="70.0" stroke="BLACK"
+                                   strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" styleClass="hidden"
+                                   width="3.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="nav3" layoutY="305.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                            minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="250.0"
+                            xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <Button id="nav_button" fx:id="nav_bg3" contentDisplay="CENTER" mnemonicParsing="false"
+                                prefHeight="70.0" prefWidth="250.0" styleClass="dark"
+                                text="Vehicles" textFill="WHITE">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Button>
+                        <Rectangle id="nav_active_accent" fx:id="accent3" fill="DODGERBLUE" height="70.0" stroke="BLACK"
+                                   strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" styleClass="hidden"
+                                   width="2.0"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="nav4" layoutY="375.0" xmlns="http://javafx.com/javafx/8.0.60"
+                            xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <Button id="nav_button" fx:id="nav_bg4" contentDisplay="CENTER" mnemonicParsing="false"
+                                prefHeight="70.0" prefWidth="250.0" styleClass="light"
+                                text="Bookings" textFill="WHITE" xmlns="http://javafx.com/javafx/8.0.60"
+                                xmlns:fx="http://javafx.com/fxml/1">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Button>
+                        <Rectangle id="nav_active_accent" fx:id="accent4" fill="DODGERBLUE" height="70.0" stroke="BLACK"
+                                   strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" styleClass="hidden"
+                                   width="2.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="nav5" layoutY="445.0" xmlns="http://javafx.com/javafx/8.0.60"
+                            xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <Button id="nav_button" fx:id="nav_bg5" contentDisplay="CENTER" mnemonicParsing="false"
+                                prefHeight="70.0" prefWidth="250.0" styleClass="dark" text="Parts" textFill="WHITE"
+                                xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Button>
+                        <Rectangle id="nav_active_accent" fx:id="accent5" fill="DODGERBLUE" height="70.0" stroke="BLACK"
+                                   strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" styleClass="hidden"
+                                   width="2.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="nav6" layoutY="515.0" xmlns="http://javafx.com/javafx/8.0.60"
+                            xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <Button id="nav_button" fx:id="nav_bg6" contentDisplay="CENTER" mnemonicParsing="false"
+                                prefHeight="70.0" prefWidth="250.0" styleClass="light" text="Logout" textFill="WHITE"
+                                xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Button>
+                        <Rectangle id="nav_active_accent" fx:id="accent6" fill="DODGERBLUE" height="70.0" stroke="BLACK"
+                                   strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" styleClass="hidden"
+                                   width="2.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutY="691.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <Pane id="app_version" prefHeight="30.0" prefWidth="250.0" visible="false">
+                            <children>
+                                <Label id="version_label" layoutX="104.0" layoutY="7.0" styleClass="button_text"
+                                       text="V 1.0.03" textFill="#cdcdcd" xmlns="http://javafx.com/javafx/8.0.60"
+                                       xmlns:fx="http://javafx.com/fxml/1">
+                                    <font>
+                                        <Font size="6.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

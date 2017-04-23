@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="main__body" prefHeight="347.0" prefWidth="446.0" styleClass="dark" stylesheets="@../UI/MainView.css" xmlns="http://javafx.com/javafx/8.0.66" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.stockcontroller">
+   <children>
+      <Pane layoutY="6.0" prefHeight="368.0" prefWidth="446.0" styleClass="window">
+         <children>
+            <Pane layoutY="-6.0" prefHeight="66.0" prefWidth="446.0" styleClass="header">
+               <children>
+                  <Label layoutX="123.0" layoutY="14.0" prefHeight="39.0" prefWidth="187.0" text="Add a new stock" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <GridPane layoutX="30.0" layoutY="75.0" prefHeight="203.0" prefWidth="384.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="125.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.0" minWidth="10.0" prefWidth="204.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Part Name" textFill="WHITE" />
+                  <Label text="Description" textFill="WHITE" GridPane.rowIndex="1" />
+                  <Label text="Part Cost" textFill="WHITE" GridPane.rowIndex="2" />
+                  <TextField fx:id="partnameL" GridPane.columnIndex="1" />
+                  <TextField fx:id="descriptionL" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="partcostL" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="62.0" layoutY="291.0" prefHeight="60.0" prefWidth="320.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="159.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="161.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="addrep" mnemonicParsing="false" onAction="#addclicked" prefHeight="39.0" prefWidth="136.0" text="add">
+                     <styleClass>
+                        <String fx:value="btn_actions" />
+                        <String fx:value="blueThin" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="39.0" prefWidth="106.0" text="cancel" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="btn_actions" />
+                        <String fx:value="blueThin" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

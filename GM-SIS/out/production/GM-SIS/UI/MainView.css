@@ -1,0 +1,459 @@
+/* Main body styles */
+#main__body
+{
+    -fx-background-color:
+            linear-gradient(to bottom, #1280b7 0%, #352fff 100%);
+}
+
+#mini__body{
+    -fx-background-color:
+            linear-gradient(to bottom, #78b4ff 0%, #2a68ff 100%);
+}
+/* Navigation bar styles */
+#nav_container
+{
+    -fx-background-image: url("img/navbg.png");
+}
+
+#nav_button
+{
+    -fx-opacity: 0.8;
+    -fx-padding: 0px 0px 0px 0px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-font-family: "Open Sans Light";
+    -fx-font-size: 20px;
+}
+#nav_button.dark
+{ -fx-background-color: #1d1d1d; }
+
+#nav_button.light
+{ -fx-background-color: transparent; }
+
+#nav_button.dark:hover {
+    -fx-background-color: #2f3335;
+    -fx-opacity: 0.85;
+    -fx-cursor: hand;
+}
+#nav_button.light:hover {
+    -fx-background-color: #484f52;
+    -fx-opacity: 0.85;
+    -fx-cursor: hand;
+}
+.light_hover
+{
+    -fx-background-color: #484f52 !important;
+    -fx-opacity: 0.85 !important;
+}
+.dark_hover
+{
+    -fx-background-color: #2f3335 !important;
+    -fx-opacity: 0.85 !important;
+}
+#nav_button.active
+{
+    -fx-text-fill: #76e4fc;
+    -fx-font-family: "fonts/OpenSans-Regular.ttf";
+    -fx-font-size: 20px;
+}
+.hidden { visibility: hidden !important; }
+.show   { visibility: visible !important; }
+
+#nav_active_accent:hover,
+#nav_active_accent
+{
+    -fx-fill: #fff;
+}
+#nav_active_accent.active
+{
+    -fx-fill: #66d8f0;
+}
+#app_version
+{
+    -fx-background-color: #1d1f20;
+    -fx-opacity: 0.8;
+}
+#version_label
+{
+    -fx-font-size:  12px;
+    -fx-text-fill:  #bbb;
+}
+
+/* Navigation Hover Styles */
+.button_mini
+{
+    -fx-background-color: transparent;
+    -fx-background-image: url("img/minim_white.png");
+    -fx-background-repeat: no-repeat;
+}
+.button_maxi
+{
+    -fx-background-color: transparent;
+    -fx-background-image: url("img/maxim_white.png");
+    -fx-background-repeat: no-repeat;
+}
+.button_close
+{
+    -fx-background-color: transparent;
+    -fx-background-image: url("img/close_white.png");
+    -fx-background-repeat: no-repeat;
+}
+.button_mini:hover{
+    -fx-background-image: url("img/minim_blue.png");
+    -fx-cursor: hand;
+}
+.button_maxi:hover{
+    -fx-background-image: url("img/maxim_blue.png");
+    -fx-cursor: hand;
+}
+.button_close:hover
+{
+    -fx-background-image: url("img/close_blue.png");
+    -fx-cursor: hand;
+}
+
+.title
+{
+    -fx-text-fill: #80d3e5;
+    -fx-font-size: 34px;
+    -fx-font-family: "Open Sans Light";
+}
+
+.title_small
+{
+    -fx-text-fill: #80d3e5;
+    -fx-font-size: 20px;
+    -fx-font-family: "Open Sans Light";
+}
+
+.data
+{
+    -fx-text-fill: #fff;
+    -fx-font-size: 20px;
+    -fx-font-family: "Open Sans Light";
+}
+
+.entry{
+    -fx-text-fill: #fef9ff;
+    -fx-font-size: 28px;
+    -fx-font-family: "Open Sans Bold";
+    -fx-font-weight: bold;
+}
+
+#btn_search
+{
+    -fx-alignment: center;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-font-family: "Open Sans";
+    -fx-font-size: 14px;
+    -fx-text-fill: #fff;
+    -fx-background-color: #0c4661;
+    -fx-border-width: 1px;
+    -fx-border-color: #0C4C68;
+    -fx-background-image: url("img/searchbtn_white.png");
+    -fx-background-repeat: no-repeat;
+}
+#btn_search:hover
+{
+    -fx-background-image: url("img/searchbtn_dark.png");
+    -fx-cursor: hand;
+    -fx-background-color: #0C4C68;
+    -fx-border-width: 1px;
+    -fx-border-color: #0c4661;
+}
+#btn_search:focused {
+     -fx-pref-height: 45px !important;
+}
+#btn_search.searching
+{
+    -fx-border-color: #b1ec30 !important;
+    -fx-background-color: #9fd82e !important;
+}
+.searching
+{
+    -fx-border-color: #b1ec30 !important;
+    -fx-background-color: #9fd82e !important;
+    -fx-text-fill: #0e0e0e !important;
+}
+
+/* Container Styles */
+.header
+{
+    -fx-background-color: #2e2b3d;
+    -fx-opacity: 0.9;
+    -fx-border-width: 1px;
+    -fx-border-color: #1c2131;
+}
+
+.container
+{
+    -fx-background-color: #1e1e2d;
+    -fx-border-width: 1px;
+    -fx-border-color: #1c2131;
+}
+
+.header_title
+{
+    -fx-text-fill: #fefefe;
+    -fx-font-size: 16px;
+    -fx-font-family: "Open Sans" !important;
+}
+.profile
+{
+    -fx-text-fill: #66d8f0 !important;
+    -fx-font-size: 24px !important;
+}
+.caption
+{
+   -fx-font-size: 14px !important;
+    -fx-font-family: "Open Sans Light" !important;
+}
+.caption_small
+{
+    -fx-font-size: 16px;
+    -fx-font-family: "Open Sans Light";
+}
+.caption_large
+{
+    -fx-font-size: 20px !important;
+    -fx-font-family: "Open Sans Light" !important;
+}
+
+#slide_out
+{
+    /*-fx-background-image: url("img/navbg.png"); */
+    -fx-background-color: #1e1e2d;
+    -fx-border-color: #4c5c70;
+}
+#textbox_square
+{ -fx-background-radius: 0px; }
+
+.searchWidgetText
+{
+    -fx-font-size: 15px;
+    -fx-pref-height: 35px;
+    -fx-pref-width: 235px !important;
+}
+.submit{
+    -fx-pref-width: 85px !important;
+}
+
+#btn_user
+{
+    -fx-alignment: center-left;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-font-family: "Open Sans";
+    -fx-font-size: 14px;
+    -fx-text-fill: #fff;
+    -fx-background-color: #0c4661;
+    -fx-border-width: 1px;
+    -fx-pref-width: 168px;
+    -fx-pref-height: 30px;
+    -fx-border-color: #0C4C68;
+}
+#btn_user:hover
+{
+    -fx-cursor: hand;
+    -fx-border-color: #b1ec30 !important;
+    -fx-background-color: #9fd82e !important;
+    -fx-text-fill: #000;
+}
+
+#btn_user:focused
+{
+    -fx-pref-height: 31px !important;
+}
+
+.img, .img:hover
+{
+    -fx-cursor: hand !important;
+}
+
+.info_blue
+{
+    -fx-text-fill: #66d8f0;
+    -fx-font-size: 14px;
+    -fx-font-family: "Open Sans Light";
+}
+.info_blue:hover
+{
+    -fx-text-fill: #62a8be;
+    -fx-cursor: hand;
+}
+
+.window
+{
+    -fx-background-color: rgba(0, 0, 0, 0.35) !important;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-radius: 1px;
+    -fx-border-width: 1px;
+    }
+.btn_actions
+{
+    -fx-opacity: 1;
+    -fx-alignment: center;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-pref-width: 125px;
+    -fx-pref-height: 30px;
+    -fx-text-fill: #fff;
+}
+
+.btn_actions:hover
+{
+    -fx-cursor: hand;
+    -fx-border-color: #b1ec30 !important;
+    -fx-background-color: #9fd82e !important;
+    -fx-text-fill: #000;
+}
+
+.btn_sectioned
+{
+    -fx-opacity: 1;
+    -fx-alignment: center;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-text-fill: #fff;
+}
+.btn_sectioned:hover
+{
+    -fx-cursor: hand;
+    -fx-border-color: #b1ec30 !important;
+    -fx-background-color: #9fd82e !important;
+    -fx-text-fill: #000;
+}
+
+.search_labels {
+    -fx-font-size: 16px;
+    -fx-font-family: "Open Sans Light";
+}
+.btn_actions.blue {
+    -fx-background-color: #0f435c;
+}
+.btn_actions.blueWide {
+    -fx-background-color: #0f435c;
+    -fx-pref-width: 155px;
+}
+.btn_actions.blueThin {
+    -fx-background-color: #0f435c;
+    -fx-pref-width: 90px;
+    -fx-translate-x: 35;
+}
+
+.btn_actions.blueThinSmall {
+    -fx-background-color: #0f435c;
+    -fx-pref-width: 60px;
+    -fx-translate-x: 35;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: rgba(0,0,0,0.35);
+    /*-fx-text-fill: #66d8f0 !important;*/
+    -fx-text-fill: #ffffff !important;
+}
+
+.viewBox{
+    -fx-background-color: rgba(0,0,0,0.25);
+    -fx-border-radius: 0;
+}
+
+.listView{
+    -fx-background-color: rgba(0,0,0,0.25);
+    -fx-border-radius: 0;
+}
+
+/* The main scrollbar CSS class of ListView */
+.listView .scroll-bar:horizontal ,
+.listView .scroll-bar:vertical{
+    -fx-background-color: rgba(0,0,0,0.5);
+    -fx-pref-width: 4px;
+    -fx-pref-height: 0px;
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+.listView .increment-button,
+.listView .decrement-button
+{
+    -fx-opacity: 0;
+}
+
+/* The main scrollbar **track** CSS class  */
+.listView .scroll-bar:horizontal .track ,
+.listView .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+}
+
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.listView .scroll-bar:horizontal .thumb,
+.listView .scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(120,203,224,0.35);
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 10em;
+    -fx-padding: 0px;
+}
+
+.text-field
+{
+    -fx-focus-color: #1e1e2d !important;
+}
+
+
+/* The main scrollbar **thumb** CSS class on event of "hover" and "pressed" */
+.listView .scroll-bar .thumb:hover,
+.listView .scroll-bar .thumb:pressed{
+    -fx-background-color: rgba(120,203,224,0.4);
+}
+
+/* List View Styles */
+/*.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: rgba(0,0,0,0.35);
+    -fx-text-fill: #fff !important;
+    -fx-border-width: 0;
+}*/
+
+.list-cell {
+    /*-fx-background-color: rgba(0,0,0,0.25);*/
+    -fx-pref-height: 35px;
+    -fx-font-size: 14px;
+}
+
+.center-vert {
+    -fx-translate-y: 20px !important;
+}
+
+.btn_narrow {
+    -fx-pref-width: 110px !important;
+}
+
+.pull_left {
+    -fx-translate-x: -10px !important;
+}
+
+.margin_right {
+    -fx-translate-x: -15px !important;
+}
+
+.table-row-cell:empty {
+    -fx-background-color: white;
+}
+
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+
+.border-bottom
+{
+    -fx-border-width: 1px;
+    -fx-border-color: transparent transparent #3c525f transparent;
+}

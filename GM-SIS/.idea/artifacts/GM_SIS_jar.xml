@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GM-SIS:jar">
+    <output-path>$PROJECT_DIR$/../Release</output-path>
+    <root id="archive" name="GM-SIS.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../Release/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="GM-SIS" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/joda-time-2.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/sqlite-jdbc-3.16.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/controlsfx-8.0.6_20.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/controlsfx-8.40.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jfoenix.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

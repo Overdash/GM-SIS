@@ -1,0 +1,245 @@
+ObservableList<ObservableList> data = FXCollections.observableArrayList();
+        try{
+
+           /*for(int i = 0; i < rs.getMetaData().getColumnCount(); i++) {
+                final int j = i;
+
+                TableColumn col = new TableColumn(rs.getMetaData().getColumnName(i + 1));
+
+                col.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<ObservableList, String>, ObservableValue<String>>() {
+                    @Override
+                    public ObservableValue<String> call(TableColumn.CellDataFeatures<ObservableList, String> param) {
+                        return new SimpleStringProperty(param.getValue().get(j).toString());
+                    }
+                });
+
+                bookingTable.getColumns().addAll(col);
+            }*/
+
+            while (rs.next()){
+                ObservableList<String> row = FXCollections.observableArrayList();
+
+                for(int i = 1; i <= rs.getMetaData().getColumnCount(); i++) row.add(rs.getString(i).trim());
+                System.out.println(row);
+                data.add(row);
+            }
+            System.out.println(data);
+            bookingTable.setItems(data);
+        } catch (SQLException se){
+            System.out.println("Loading table flopped g!");
+            se.printStackTrace();
+        }
+
+
+        try {
+                                System.out.println(newValue);
+                                System.out.println(oldValue);
+                                System.out.println(observable.toString());
+                                updateDetails(newValue.intValue()+1);
+                            } catch (Exception e) {
+                                bookingTable.getSelectionModel().clearSelection();
+                            }
+
+dialogVbox.getChildren().add(new Label("Current Mileage on Vehicle: "));
+        milesTF = new TextField();
+        regCB.getSelectionModel().selectedIndexProperty().addListener(
+                ((observable, oldValue, newValue) -> {
+                    String findMiles = "SELECT Mileage FROM Vehicle WHERE RegNumber =" +
+                            regCB.getSelectionModel().getSelectedIndex();
+                    ResultSet milesRS = db.query(findMiles);
+                    try{
+                        milesTF.setText(milesRS.getString("Mileage"));
+                        milesRS.close();
+                    } catch (SQLException se) {
+                        se.printStackTrace();
+                    }
+                })
+        );
+        dialogVbox.getChildren().add(milesTF);
+
+       REF: http://code.makery.ch/blog/javafx-dialogs-official/
+            http://code.makery.ch/blog/javafx-8-tableview-sorting-filtering/
+
+       /*String insert = "INSERT INTO Bookings(BookingType,EmployeeID,BookingTime,FinishDate,TotalTime,CurrentMileage," +
+                           "CustomerID,RegNumber,BookingDate,Fault) VALUES("+type+","+mechID+","+btime+","+finDate+","+0+","
+                           +cMiles+","+custID+","+reg+","+bookDate+","+faultDetail+")";
+                   db.update(insert);*/
+
+
+        //String dateString = DateTimeFormatter.ofPattern("dd/MM/YYYY").format(date);
+
+
+
+        //String before = time.minusMinutes(30).toString();
+        //String later = time.plusMinutes(30).toString();
+        /*String query = "SELECT BookingDate FROM Bookings WHERE EmployeeID = "+ mechID +
+                " AND (BookingTime = '" + time.toString() + "' OR BookingTime = '" + before + "' OR " +
+                "BookingTime = '" + later +"')";*/
+
+//Customer filtering list
+ObservableList<String> custList = FXCollections.observableArrayList();
+        ResultSet custListRs = db.query("SELECT CustomerID FROM Customers");
+        try {
+            custList.add("");
+            while (custListRs.next())
+                custList.add(custListRs.getString(1));
+            //regRs.close();
+        } catch (SQLException se) {
+            se.printStackTrace();
+        }
+        custListCB = new ChoiceBox<>(custList);
+        hb.getChildren().addAll(new Label("Customer ID (Optional): "), custListCB,
+                    new Label(" Choose to filter Vehicle Reg list, select empty to view all."));
+        dialogVbox.getChildren().add(hb);
+
+        //Set the controls
+        ObservableList<String> regList = FXCollections.observableArrayList();
+        String getAllReg = "SELECT RegNumber FROM Vehicle";
+        ResultSet regRs = db.query(getAllReg);
+        try {
+            while (regRs.next())
+                regList.add(regRs.getString(1));
+            //regRs.close();
+        } catch (SQLException se) {
+            se.printStackTrace();
+        }
+        regCB = new ChoiceBox<>(regList); //Vech Reg
+        custListCB.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if(newValue != null){
+                ObservableList<String> filteredRegList = FXCollections.observableArrayList();
+                String getReg = "SELECT RegNumber FROM Vehicle WHERE CustomerID = " + newValue;
+                                    //+custListCB.getSelectionModel().getSelectedItem();
+                if(custListCB.getSelectionModel().getSelectedItem().isEmpty())
+                    getReg = "SELECT RegNumber FROM Vehicle";
+                System.out.println(custListCB.getSelectionModel().getSelectedItem());
+                ResultSet custRegRS = db.query(getReg);
+                try {
+                    while (custRegRS.next())
+                        filteredRegList.add(custRegRS.getString(1));
+                    //regRs.close();
+                } catch (SQLException se) {
+                    se.printStackTrace();
+                }
+                regCB.setItems(filteredRegList);
+            }
+        });
+	    hb = new HBox(10);
+        hb.getChildren().addAll(new Label("Vehicle Registration Number*: "), regCB); //Assume the Reg must be in the Vech DB
+        dialogVbox.getChildren().add(hb);
+
+
+
+try{
+            while(rs.next()){
+                filteredList.setPredicate(adminData -> {
+                    try {
+                        if(adminData.getcolSurname().toLowerCase().contains(rs.getString(1).toLowerCase())) return true;
+                    } catch (SQLException se) {
+                        se.printStackTrace();
+                        AlertBox.error("Error While Searching", "Cannot search for the Surname '" + toSearch + "'", se);
+                    }
+
+                    return false;
+                });
+            }
+        } catch (SQLException se) {
+            se.printStackTrace();
+            AlertBox.error("Error While Searching", "Cannot search for the Surname '" + toSearch + "'", se);
+        }
+
+
+
+        try {
+                    while (masterRs.next()) {
+                        filteredData.setPredicate(data -> {
+                            String lowerCaseItem;
+                            try {
+                                if (isVech || field.equals("Firstname")) {
+                                    lowerCaseItem = masterRs.getString(1).toLowerCase();
+                                    if (isVech && data.getRegNum().toLowerCase().contains(lowerCaseItem))
+                                        return true;
+                                    else if (data.getCustFName().toLowerCase().contains(lowerCaseItem))
+                                        return true;
+                                    //System.out.println("Vech or FN: " + lowerCaseItem);
+                                } else {
+                                    lowerCaseItem = masterRs.getString("Surname").toLowerCase();
+                                    //System.out.println("Surname: " + lowerCaseItem);
+                                    if (data.getCustSurname().toLowerCase().contains(lowerCaseItem))
+                                        return true;
+                                }
+                            } catch (SQLException se) {
+                                popError("Error with Query", "Cannot execute search Query", se);
+                                se.printStackTrace();
+                            }
+                            return false;
+                        });
+                    }
+                } catch (SQLException se) {
+                    popError("Error with Query", "Resultset failed", se);
+                    se.printStackTrace();
+                }
+
+
+
+
+        private void search(String table, String field) {
+
+                if (searchBox.getText().equals("")) {
+                    popError("Empty Search Box", "Please provide search details or refresh the table.");
+                    searchBox.requestFocus();
+                    return;
+                }
+                String toFind = searchBox.getText();
+                String masterQuery;
+                boolean isVech = table.equals("Vehicle");
+                if (isVech) masterQuery = "SELECT RegNumber FROM " + table + " WHERE " + field + " LIKE '%" + toFind + "%'";
+                else masterQuery = "SELECT Firstname, Surname FROM " + table + " WHERE " + field + " LIKE '%" + toFind + "%'";
+                ResultSet masterRs = db.query(masterQuery);
+                if (masterRs == null) {
+                    popError("Search failed!", "No booking found under '" + toFind + "'.");
+                    searchBox.requestFocus();
+                    return;
+                }
+
+                FilteredList<Data> filteredData = new FilteredList<>(loadData(), predicate -> false);
+                try {
+                    while (masterRs.next()) {
+                        filteredData.setPredicate(data -> {
+                            String lowerCaseItem;
+                            try {
+                                if (isVech || field.equals("Firstname")) {
+                                    lowerCaseItem = masterRs.getString(1).toLowerCase();
+                                    if (isVech && data.getRegNum().toLowerCase().contains(lowerCaseItem))
+                                        return true;
+                                    else if (data.getCustFName().toLowerCase().contains(lowerCaseItem))
+                                        return true;
+                                    //System.out.println("Vech or FN: " + lowerCaseItem);
+                                } else {
+                                    lowerCaseItem = masterRs.getString("Surname").toLowerCase();
+                                    //System.out.println("Surname: " + lowerCaseItem);
+                                    if (data.getCustSurname().toLowerCase().contains(lowerCaseItem))
+                                        return true;
+                                }
+                            } catch (SQLException se) {
+                                popError("Error with Query", "Cannot execute search Query", se);
+                                se.printStackTrace();
+                            }
+                            return false;
+                        });
+                    }
+                } catch (SQLException se) {
+                    popError("Error with Query", "Resultset failed", se);
+                    se.printStackTrace();
+                }
+                if (filteredData.isEmpty()) {
+                    popError("Search failed!", "No booking found under '" + toFind + "'.");
+                    searchBox.requestFocus();
+                    return;
+                }
+                //System.out.println(table + " " + field);
+                //System.out.println(filteredData.toString());
+                SortedList<Data> sorted = new SortedList<>(filteredData);
+                sorted.comparatorProperty().bind(bookingTable.comparatorProperty());
+                bookingTable.setItems(sorted);
+                btnReset.setDisable(false);
+            }

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="main__body" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../UI/MainView.css" xmlns="http://javafx.com/javafx/8.0.66" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.PartsController">
+   <children>
+       <!-- Navigation Bar -->
+       <AnchorPane id="nav_container" minHeight="0.0" minWidth="0.0" prefHeight="108.0" prefWidth="1080.0">
+           <children>
+               <AnchorPane fx:id="nav1" layoutX="175.0" prefHeight="108.0" prefWidth="70.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+                   <children>
+                       <Button id="nav_button" fx:id="navUP" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="108.0" prefWidth="125.0" styleClass="dark" text="User Panel" textFill="WHITE">
+                           <font>
+                               <Font size="20.0" />
+                           </font>
+                       </Button>
+                       <Rectangle id="nav_active_accent" fx:id="accent1" fill="WHITE" height="2.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" styleClass="hidden" width="125.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" />
+                   </children>
+               </AnchorPane>
+               <AnchorPane fx:id="nav2" layoutX="300.0">
+                   <children>
+                       <Button id="nav_button" fx:id="navCust" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="108.0" prefWidth="125.0" styleClass="light" text="Customers" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                               <Font size="20.0" />
+                           </font>
+                       </Button>
+                       <Rectangle id="nav_active_accent" fx:id="accent2" fill="DODGERBLUE" height="2.0" layoutX="1.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" styleClass="hidden" width="124.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" />
+                   </children>
+               </AnchorPane>
+               <AnchorPane fx:id="nav3" layoutX="425.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="108.0" prefWidth="125.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+                   <children>
+                       <Button id="nav_button" fx:id="navVech" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="108.0" prefWidth="160.0" styleClass="dark" text="Vehicles" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                               <Font size="20.0" />
+                           </font>
+                       </Button>
+                       <Rectangle id="nav_active_accent" fx:id="accent3" fill="DODGERBLUE" height="2.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" styleClass="hidden" width="125.0" />
+                   </children>
+               </AnchorPane>
+               <AnchorPane fx:id="nav5" layoutX="550.0" prefHeight="108.0" prefWidth="125.0">
+                   <children>
+                       <Button id="nav_button" fx:id="navBook" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="108.0" prefWidth="125.0" styleClass="light" text="Bookings" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                               <Font size="20.0" />
+                           </font>
+                       </Button>
+                       <Rectangle id="nav_active_accent" fx:id="accent5" fill="DODGERBLUE" height="2.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" styleClass="hidden" width="125.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" />
+                   </children>
+               </AnchorPane>
+               <AnchorPane fx:id="nav4" layoutX="675.0" prefHeight="108.0" prefWidth="125.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+                   <children>
+                       <Button id="nav_button" fx:id="navParts" centerShape="false" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="108.0" prefWidth="125.0" text="Parts" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                               <Font size="20.0" />
+                           </font>
+                     <styleClass>
+                        <String fx:value="dark" />
+                        <String fx:value="active" />
+                     </styleClass>
+                       </Button>
+                       <Rectangle id="nav_active_accent" fx:id="accent4" fill="DODGERBLUE" height="2.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" styleClass="active" width="125.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" />
+                   </children>
+               </AnchorPane>
+               <AnchorPane fx:id="nav6" layoutX="977.0" layoutY="67.0" prefHeight="40.0" prefWidth="103.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+                   <children>
+                       <Button id="nav_button" fx:id="navOut" alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="103.0" styleClass="dark" text="Logout" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+                           <font>
+                               <Font size="20.0" />
+                           </font>
+                       </Button>
+                   </children>
+               </AnchorPane>
+               <Rectangle fill="#4c5c70" height="1.0" layoutX="1.0" layoutY="108.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1079.0" />
+               <Rectangle fill="#00000090" height="1.0" layoutX="1.0" layoutY="107.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1079.0" />
+               <Label id="lbl_title" fx:id="title" layoutX="14.0" layoutY="32.0" styleClass="title" text="Parts" textFill="#72cee5">
+                   <font>
+                       <Font name="Open Sans Light" size="40.0" />
+                   </font>
+               </Label>
+               <AnchorPane fx:id="nav21" layoutX="800.0">
+                   <children>
+                       <Button id="nav_button" fx:id="sRep" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="108.0" prefWidth="125.0" styleClass="light" text="S. Repairs" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                               <Font size="20.0" />
+                           </font>
+                       </Button>
+                       <Rectangle id="nav_active_accent" fx:id="accent21" fill="DODGERBLUE" height="2.0" layoutX="1.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" styleClass="hidden" width="124.0" />
+                   </children>
+               </AnchorPane>
+           </children>
+       </AnchorPane>
+
+       <!-- Rest of UI -->
+       <BorderPane layoutX="1000.0" prefHeight="37.0" prefWidth="76.0">
+           <right>
+               <Button fx:id="closeBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="18.0" styleClass="button_close" text="-" BorderPane.alignment="CENTER" />
+           </right>
+           <center>
+               <Button fx:id="minBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="18.0" styleClass="button_mini" text="-" BorderPane.alignment="CENTER" />
+           </center>
+       </BorderPane>
+
+       <BorderPane fx:id="draggable" prefHeight="18.0" prefWidth="990.0" />
+      <Pane layoutX="11.0" layoutY="122.0" prefHeight="91.0" prefWidth="375.0" styleClass="window">
+         <children>
+            <Pane prefHeight="40.0" prefWidth="375.0" styleClass="header">
+               <children>
+                  <Label layoutX="14.0" layoutY="7.0" text="Search for a Part" textFill="#f8f8f8" />
+               </children>
+            </Pane>
+            <Label layoutX="11.0" layoutY="52.0" text="Part Name:" textFill="WHITE" />
+            <ComboBox fx:id="partdroplist" layoutX="108.0" layoutY="46.0" prefHeight="37.0" prefWidth="257.0" promptText="Select a Part..." />
+         </children>
+      </Pane>
+      <Pane layoutX="407.0" layoutY="126.0" prefHeight="91.0" prefWidth="654.0" styleClass="window">
+         <children>
+            <Pane layoutY="-5.0" prefHeight="37.0" prefWidth="654.0" styleClass="header">
+               <children>
+                  <Label layoutX="14.0" layoutY="7.0" text="Search for Repairs" textFill="WHITE" />
+               </children>
+            </Pane>
+            <TextField fx:id="searchField" layoutX="328.0" layoutY="41.0" onAction="#search" onMouseClicked="#search" prefHeight="39.0" prefWidth="308.0" />
+            <ChoiceBox fx:id="filterdroplist" layoutX="117.0" layoutY="41.0" prefHeight="40.0" prefWidth="204.0" />
+            <Label layoutX="6.0" layoutY="50.0" text="Fliter Search:" textFill="#f8f1f1" />
+         </children>
+      </Pane>
+      <Pane layoutX="12.0" layoutY="225.0" prefHeight="311.0" prefWidth="375.0" styleClass="window">
+         <children>
+            <Pane layoutY="1.0" prefHeight="40.0" prefWidth="375.0" styleClass="header">
+               <children>
+                  <Label layoutX="14.0" layoutY="7.0" text="Part Details" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Button fx:id="addstock" layoutX="-25.0" layoutY="221.0" mnemonicParsing="false" onAction="#updateStock" text="Add Stock">
+               <styleClass>
+                  <String fx:value="btn_actions" />
+                  <String fx:value="blueThin" />
+               </styleClass>
+            </Button>
+            <Button fx:id="newstock" layoutX="-25.0" layoutY="267.0" mnemonicParsing="false" onAction="#handleButtonAction2" text="New Stock">
+               <styleClass>
+                  <String fx:value="btn_actions" />
+                  <String fx:value="blueThin" />
+               </styleClass>
+            </Button>
+            <Label fx:id="partnameL2" layoutX="131.0" layoutY="61.0" text="..." textFill="WHITE" />
+            <Label fx:id="stocklevelL" layoutX="131.0" layoutY="149.0" text="..." textFill="#f5efef" />
+            <Label fx:id="descriptionL" layoutX="131.0" layoutY="119.0" text="..." textFill="WHITE" />
+            <Label fx:id="partidL" layoutX="131.0" layoutY="91.0" text="..." textFill="WHITE" />
+            <Button layoutX="240.0" layoutY="269.0" mnemonicParsing="false" onAction="#deleteclicked3" prefWidth="117.0" text="Del Part">
+               <styleClass>
+                  <String fx:value="btn_actions" />
+                  <String fx:value="blueThin" />
+               </styleClass>
+            </Button>
+            <Button fx:id="editstock" layoutX="240.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleButtonAction4" text="Edit Part">
+               <styleClass>
+                  <String fx:value="btn_actions" />
+                  <String fx:value="blueThin" />
+               </styleClass>
+            </Button>
+            <Label fx:id="partcostL2" layoutX="131.0" layoutY="181.0" text="..." textFill="WHITE" />
+            <Button fx:id="viewdel" layoutX="110.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleButtonAction5" prefHeight="63.0" text="View Deliveries">
+               <styleClass>
+                  <String fx:value="btn_actions" />
+                  <String fx:value="blueWide" />
+               </styleClass>
+            </Button>
+            <Button fx:id="adddel" layoutX="110.0" layoutY="222.0" mnemonicParsing="false" onAction="#handleButtonAction6" prefWidth="130.0" text="Add Delivery">
+               <styleClass>
+                  <String fx:value="btn_actions" />
+                  <String fx:value="blueWide" />
+               </styleClass>
+            </Button>
+            <Label layoutX="3.0" layoutY="53.0" styleClass="title_small" text="Name of Part:" textFill="WHITE" />
+            <Label layoutX="5.0" layoutY="83.0" prefHeight="30.0" prefWidth="121.0" styleClass="title_small" text="Part ID:" textFill="WHITE" />
+            <Label layoutX="5.0" layoutY="111.0" prefHeight="30.0" prefWidth="116.0" styleClass="title_small" text="Description:" textFill="WHITE" />
+            <Label layoutX="7.0" layoutY="141.0" prefHeight="30.0" prefWidth="116.0" styleClass="title_small" text="Stock Level:" textFill="WHITE" />
+            <Label layoutX="5.0" layoutY="173.0" prefHeight="30.0" prefWidth="116.0" styleClass="title_small" text="Part Cost:" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="406.0" layoutY="381.0" prefHeight="318.0" prefWidth="315.0" styleClass="window">
+         <children>
+            <Pane prefHeight="40.0" prefWidth="315.0" styleClass="header">
+               <children>
+                  <Label layoutX="14.0" layoutY="7.0" text="List of Bookings (type 0=Repairs, type 1=Diagnostic)" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Button fx:id="dltbook" layoutX="171.0" layoutY="274.0" mnemonicParsing="false" onAction="#deleteclicked2" text="Delete">
+               <styleClass>
+                  <String fx:value="btn_actions" />
+                  <String fx:value="blueThin" />
+               </styleClass>
+            </Button>
+            <Label layoutX="6.0" layoutY="261.0" styleClass="title_small" text="Sum of Parts:" textFill="WHITE" />
+            <Label fx:id="billL" layoutX="128.0" layoutY="269.0" text="..." textFill="WHITE" />
+            <Label fx:id="warrantcovL" layoutX="33.0" layoutY="287.0" prefHeight="27.0" prefWidth="161.0" textFill="WHITE" />
+            <TabPane fx:id="chatTab" layoutX="4.0" layoutY="40.0" prefHeight="210.0" prefWidth="308.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Past Bookings">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="booktable" layoutX="-4.0" layoutY="-1.0" prefHeight="175.0" prefWidth="315.0">
+                                <columns>
+                                  <TableColumn prefWidth="165.0" text="Bookings">
+                                       <columns>
+                                          <TableColumn fx:id="bookidcol" prefWidth="28.0" text="ID" />
+                                          <TableColumn fx:id="typecol" prefWidth="49.0" text="Type" />
+                                          <TableColumn fx:id="datecol" prefWidth="90.0" text="Date" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="76.0" text="Vehicle">
+                                       <columns>
+                                          <TableColumn fx:id="vehregcol" prefWidth="75.0" text="Registration" />
+                                       </columns>
+                                    </TableColumn>
+                                  <TableColumn prefWidth="149.0" text="Customer">
+                                       <columns>
+                                          <TableColumn fx:id="fnamecol2" prefWidth="75.0" text="Firstname" />
+                                          <TableColumn fx:id="snamecol2" prefWidth="75.0" text="Surname" />
+                                       </columns>
+                                    </TableColumn>
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Future Bookings">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="booktable2" layoutX="-2.0" layoutY="-1.0" prefHeight="175.0" prefWidth="315.0">
+                                 <columns>
+                                    <TableColumn prefWidth="165.0" text="Bookings">
+                                       <columns>
+                                          <TableColumn fx:id="bookidcolv2" prefWidth="28.0" text="ID" />
+                                          <TableColumn fx:id="typecolv2" prefWidth="49.0" text="Type" />
+                                          <TableColumn fx:id="datecolv2" prefWidth="90.0" text="Date" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="86.0" text="Vehicle">
+                                       <columns>
+                                          <TableColumn fx:id="vehregcolv2" prefWidth="75.0" text="Registration" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="149.0" text="Customer">
+                                       <columns>
+                                          <TableColumn fx:id="fnamecolv2" prefWidth="75.0" text="Firstname" />
+                                          <TableColumn fx:id="snamecolv2" prefWidth="75.0" text="Surname" />
+                                       </columns>
+                                    </TableColumn>
+                                 </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+      <Pane layoutX="729.0" layoutY="378.0" prefHeight="318.0" prefWidth="332.0" styleClass="window">
+         <children>
+            <Pane layoutY="1.0" prefHeight="40.0" prefWidth="332.0" styleClass="header">
+               <children>
+                  <Label layoutX="14.0" layoutY="7.0" text="Repair Details" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Button fx:id="addpart" layoutX="-18.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="61.0" text="Add">
+               <styleClass>
+                  <String fx:value="btn_actions" />
+                  <String fx:value="blueThin" />
+               </styleClass>
+            </Button>
+            <Button fx:id="edtpart" layoutX="84.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleButtonAction3" text="Edit">
+               <styleClass>
+                  <String fx:value="btn_actions" />
+                  <String fx:value="blueThin" />
+               </styleClass>
+            </Button>
+            <Button fx:id="dltpart" layoutX="187.0" layoutY="275.0" mnemonicParsing="false" onAction="#deleteclicked" text="Delete">
+               <styleClass>
+                  <String fx:value="btn_actions" />
+                  <String fx:value="blueThin" />
+               </styleClass>
+            </Button>
+            <Label layoutX="11.0" layoutY="52.0" styleClass="title_small" text="Name of Part:" textFill="#e8e4e4" />
+            <Label layoutX="11.0" layoutY="120.0" styleClass="title_small" text="Date of Install:" textFill="WHITE" />
+            <Label layoutX="11.0" layoutY="154.0" styleClass="title_small" text="Warranty date:" textFill="WHITE" />
+            <Label layoutX="10.0" layoutY="190.0" styleClass="title_small" text="Cost of Part:" textFill="WHITE" />
+            <Label fx:id="partnameL" layoutX="148.0" layoutY="60.0" text="..." textFill="WHITE" />
+            <Label fx:id="installdateL" layoutX="148.0" layoutY="128.0" text="..." textFill="WHITE" />
+            <Label fx:id="warrantydateL" layoutX="148.0" layoutY="162.0" text="..." textFill="WHITE" />
+            <Label fx:id="partcostL" layoutX="148.0" layoutY="198.0" text="..." textFill="WHITE" />
+            <Label layoutX="11.0" layoutY="85.0" prefHeight="30.0" prefWidth="116.0" styleClass="title_small" text="Repair ID:" textFill="WHITE" />
+            <Label fx:id="repairidL" layoutX="148.0" layoutY="92.0" text="..." textFill="WHITE" />
+         </children>
+      </Pane>
+      <TableView fx:id="parttable" layoutX="407.0" layoutY="229.0" prefHeight="125.0" prefWidth="654.0">
+        <columns>
+          <TableColumn fx:id="p" prefWidth="280.0" text="Repairs">
+               <columns>
+                  <TableColumn fx:id="idcol" prefWidth="75.0" text="Repair ID" />
+                  <TableColumn fx:id="namecol" prefWidth="75.0" text="Part" />
+                  <TableColumn fx:id="installcol" prefWidth="75.0" text="Install Date" />
+                  <TableColumn fx:id="warrantycol" prefWidth="75.0" text="Warranty Date" />
+               </columns></TableColumn>
+          <TableColumn prefWidth="100.0" text="Vehicle">
+               <columns>
+                  <TableColumn fx:id="regcol" prefWidth="75.0" text="Registration" />
+               </columns></TableColumn>
+            <TableColumn minWidth="0.0" prefWidth="100.0" text="Customer">
+               <columns>
+                  <TableColumn fx:id="fnamecol" prefWidth="75.0" text="Firstname" />
+                  <TableColumn fx:id="snamecol" prefWidth="75.0" text="Surname" />
+               </columns></TableColumn>
+            <TableColumn prefWidth="75.0" text="Bookings">
+               <columns>
+                  <TableColumn fx:id="bookidcol2" prefWidth="75.0" text="ID" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <TabPane layoutX="16.0" layoutY="552.0" prefHeight="146.0" prefWidth="375.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Customer Details">
+               <content>
+                  <Pane prefHeight="136.0" prefWidth="375.0" styleClass="window">
+                     <children>
+                        <Label layoutX="11.0" layoutY="23.0" styleClass="title_small" text="Customer First Name:" textFill="WHITE" />
+                        <Label fx:id="custfnameL" layoutX="204.0" layoutY="31.0" text="..." textFill="WHITE" />
+                        <Label layoutX="11.0" layoutY="57.0" styleClass="title_small" text="Customer Surname:" textFill="WHITE" />
+                        <Label fx:id="custsnameL" layoutX="204.0" layoutY="65.0" text="..." textFill="WHITE" />
+                     </children></Pane>
+               </content>
+            </Tab>
+          <Tab text="Vehicle Details">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0" styleClass="window">
+                     <children>
+                        <Label layoutX="11.0" layoutY="18.0" styleClass="title_small" text="Vehicle Registration:" textFill="WHITE" />
+                        <Label fx:id="regL" layoutX="205.0" layoutY="26.0" text="..." textFill="WHITE" />
+                        <Label layoutX="10.0" layoutY="53.0" styleClass="title_small" text="Covered by Warranty:" textFill="WHITE" />
+                        <Label fx:id="covwarrL" layoutX="205.0" layoutY="61.0" text="..." textFill="WHITE" />
+                     </children></Pane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

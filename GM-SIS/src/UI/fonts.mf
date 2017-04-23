@@ -1,0 +1,9 @@
+OpenSans-Regular=/view/OpenSans-Regular.ttf
+OpenSans-Light=/view/OpenSans-Light.ttf
+OpenSans-Bold=/view/OpenSans-Bold.ttf
+OpenSans-BoldItalic=/view/OpenSans-BoldItalic.ttf
+OpenSans-ExtraBold=/view/OpenSans-ExtraBold.ttf
+OpenSans-Italic=/view/OpenSans-Italic.ttf
+OpenSans-LightItalic=/view/OpenSans-LightItalic.ttf
+OpenSans-Semibold=/view/OpenSans-Semibold.ttf
+OpenSans-SemiboldItalic=/view/OpenSans-SemiboldItalic.ttf

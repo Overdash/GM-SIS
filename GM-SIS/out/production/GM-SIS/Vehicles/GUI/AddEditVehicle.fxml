@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="650.0" stylesheets="@../../UI/MainView.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane id="main__body" prefHeight="675.0" prefWidth="652.0" stylesheets="@../../UI/MainView.css">
+         <children>
+            <Pane id="nav_container" layoutX="-7.0" layoutY="-12.0" prefHeight="65.0" prefWidth="659.0" styleClass="header" stylesheets="@../../UI/MainView.css">
+               <children>
+                  <Label fx:id="lblTitle" layoutX="10.0" layoutY="15.0" styleClass="title" text="Label" />
+                  <BorderPane fx:id="draggable" layoutX="4.0" layoutY="7.0" prefHeight="58.0" prefWidth="655.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="-1.0" layoutY="52.0" prefHeight="571.0" prefWidth="661.0">
+               <children>
+                  <Label layoutX="10.0" layoutY="59.0" styleClass="title_small" text="Registation Number:" />
+                  <Label layoutX="10.0" layoutY="139.0" styleClass="title_small" text="Select Vehicle:" />
+                  <Label layoutX="10.0" layoutY="399.0" styleClass="title_small" text="Mileage:" />
+                  <Label layoutX="10.0" layoutY="199.0" styleClass="title_small" text="Make:" />
+                  <Label layoutX="10.0" layoutY="239.0" styleClass="title_small" text="Model:" />
+                  <Label layoutX="10.0" layoutY="279.0" styleClass="title_small" text="Colour:" />
+                  <Label layoutX="10.0" layoutY="319.0" styleClass="title_small" text="Fuel Type:" />
+                  <Label layoutX="10.0" layoutY="359.0" styleClass="title_small" text="Engine size:" />
+                  <Label layoutX="10.0" layoutY="99.0" styleClass="title_small" text="Vehicle Type:" />
+                  <Label layoutX="10.0" layoutY="439.0" styleClass="title_small" text="Warranty" />
+                  <TextField fx:id="regTxt" layoutX="219.0" layoutY="59.0" prefHeight="27.0" prefWidth="189.0" />
+                  <TextField fx:id="makeTxt" layoutX="219.0" layoutY="199.0" prefHeight="27.0" prefWidth="189.0" />
+                  <TextField fx:id="modelTxt" layoutX="219.0" layoutY="239.0" prefHeight="27.0" prefWidth="189.0" />
+                  <TextField fx:id="colourTxt" layoutX="219.0" layoutY="279.0" prefHeight="27.0" prefWidth="189.0" />
+                  <TextField fx:id="engineTxt" layoutX="219.0" layoutY="359.0" prefHeight="27.0" prefWidth="189.0" />
+                  <TextField fx:id="mileageTxt" layoutX="219.0" layoutY="399.0" prefHeight="27.0" prefWidth="189.0" />
+                  <CheckBox fx:id="WarrantyChk" layoutX="219.0" layoutY="439.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="224.0" text="Tick if vehicle is under warranty" />
+                  <ChoiceBox fx:id="SelectCmb" layoutX="218.0" layoutY="139.0" prefHeight="27.0" prefWidth="361.0" />
+                  <CheckBox fx:id="NoSelectChk" layoutX="218.0" layoutY="169.0" mnemonicParsing="false" text="Vehicle is not in the list" />
+                  <Label layoutX="10.0" layoutY="479.0" styleClass="title_small" text="Warranty company:" />
+                  <ChoiceBox fx:id="WarrabtyCmb" layoutX="219.0" layoutY="479.0" prefHeight="27.0" prefWidth="190.0" />
+                  <ChoiceBox fx:id="FTypeCmb" layoutX="219.0" layoutY="319.0" prefHeight="27.0" prefWidth="189.0" />
+                  <Label layoutX="10.0" layoutY="19.0" styleClass="title_small" text="Select Customer ID:" />
+                  <ChoiceBox fx:id="CustIDCmb" layoutX="219.0" layoutY="19.0" prefHeight="27.0" prefWidth="191.0" />
+                  <ChoiceBox fx:id="VtypeCmb" layoutX="219.0" layoutY="99.0" prefWidth="150.0" />
+                  <Label layoutX="10.0" layoutY="519.0" styleClass="title_small" text="MOT Renew Date" />
+                  <Label layoutX="419.0" layoutY="479.0" styleClass="title_small" text="Expiry date:" />
+                  <DatePicker fx:id="MOTdate" layoutX="217.0" layoutY="519.0" prefHeight="21.0" prefWidth="231.0" />
+                  <DatePicker fx:id="WarrExpiry" layoutX="536.0" layoutY="479.0" prefHeight="27.0" prefWidth="113.0" />
+               </children>
+            </Pane>
+            <Pane layoutY="620.0" prefHeight="58.0" prefWidth="652.0" styleClass="header" stylesheets="@../../UI/MainView.css">
+               <children>
+                  <Button fx:id="btnCancel" layoutX="317.0" layoutY="4.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="112.0" text="Cancel">
+                     <styleClass>
+                        <String fx:value="btn_actions" />
+                        <String fx:value="blueThin" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnConfirm" layoutX="441.0" layoutY="4.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="112.0" text="Confirm">
+                     <styleClass>
+                        <String fx:value="btn_actions" />
+                        <String fx:value="blueThin" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

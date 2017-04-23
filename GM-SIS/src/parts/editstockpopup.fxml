@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="main__body" prefHeight="347.0" prefWidth="446.0" styleClass="dark" stylesheets="@../UI/MainView.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.editstockcontroller">
+   <children>
+      <Pane layoutY="6.0" prefHeight="368.0" prefWidth="446.0" styleClass="window">
+         <children>
+            <Pane layoutY="-6.0" prefHeight="66.0" prefWidth="446.0" styleClass="header">
+               <children>
+                  <Label layoutX="126.0" layoutY="14.0" prefHeight="39.0" prefWidth="167.0" text="Edit Stock Part" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <GridPane layoutX="43.0" layoutY="78.0" prefHeight="203.0" prefWidth="353.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="134.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="259.0" minWidth="10.0" prefWidth="219.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Part Name:" textFill="WHITE" />
+                  <Label text="Description:" textFill="WHITE" GridPane.rowIndex="1" />
+                  <Label text="Part Cost:" textFill="WHITE" GridPane.rowIndex="2" />
+                  <TextField fx:id="partcostL" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="descriptionL" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="partnameL" prefHeight="37.0" prefWidth="93.0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="66.0" layoutY="280.0" prefHeight="73.0" prefWidth="304.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="136.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="144.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="addrep" mnemonicParsing="false" onAction="#addclicked" prefHeight="39.0" prefWidth="136.0" text="confirm">
+                     <styleClass>
+                        <String fx:value="btn_actions" />
+                        <String fx:value="blueThin" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="39.0" prefWidth="106.0" text="cancel" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="btn_actions" />
+                        <String fx:value="blueThin" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
